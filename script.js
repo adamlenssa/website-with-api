@@ -1,26 +1,27 @@
+// for (let i = 1; i < 31; i++) {
 let query = `
-query ($id: Int) {
-  Media (id: $id, type: ANIME) { 
-    id
-    title {
-      english
-      native
+query GetFirstsThree{
+  Page(page: 1, perPage: 30) {
+    media{
+      title{
+        english
+        native
+    	}
+     id
+   	popularity
+    coverImage{
+    	medium
     }
-    description
-    coverImage {
-      medium
+    source
     }
-    rankings {
-      rank
-      type
-      context
-    }
+    
   }
+
 }
-`;
+  `;
 
 let variables = {
-  id: 1,
+  id: 2,
 };
 
 const url = "https://graphql.anilist.co",
@@ -40,16 +41,10 @@ const data = async () =>
   await fetch(url, options)
     .then((response) => response.json())
     .then((json) => {
-      console.log(json.data.Media);
-      let data = json.data.Media;
-      const wrapper = document.querySelector(".wrapper");
-      const newDiv = document.createElement("div");
-
-      newDiv.classList.add("card");
-      const title = document.createElement("h3");
-      title.classList.add("card-title");
-      title.innerHTML = data.title.english;
-      wrapper.appendChild(newDiv);
-      newDiv.appendChild(title);
-    });
+      console.log(json);
+      const data = json.data.Page.media;
+      data.map((anime) => console.log(anime.title));
+    })
+    .catch((err) => console.log(err));
 data();
+// }

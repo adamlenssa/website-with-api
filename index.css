@@ -1,0 +1,13 @@
+img {
+   box-sizing: border-box;
+   width: 100%;
+}
+
+.card {
+   max-width: 300px;
+   width: 100%;
+   text-align: center;
+}
+.card div {
+   width: 300px;
+}
