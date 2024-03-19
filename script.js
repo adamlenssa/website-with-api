@@ -13,6 +13,7 @@ query GetFirstsThree{
     	medium
     }
     source
+    description
     }
     
   }
@@ -43,7 +44,19 @@ const data = async () =>
     .then((json) => {
       console.log(json);
       const data = json.data.Page.media;
-      data.map((anime) => console.log(anime.title));
+      data.map((anime) => {
+        const wrapper = document.querySelector(".wrapper");
+        const card = document.createElement("div");
+        const imgWrapper = document.createElement("div");
+        const image = document.createElement("img");
+        const title = document.createElement("h3");
+        const about = document.createElement("p");
+        console.log(anime.coverImage);
+        image.src = anime.coverImage.medium;
+        imgWrapper.appendChild(image);
+        card.appendChild(imgWrapper);
+        wrapper.appendChild();
+      });
     })
     .catch((err) => console.log(err));
 data();
