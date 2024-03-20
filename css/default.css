@@ -1,0 +1,35 @@
+:root {
+   --main-blue: #3E92CC;
+   --main-darker-blue: #2A628F;
+   --dark-blue: #13293D;
+   --dark-blue-accent: #16324F;
+   --background-blue: #18435A;
+   font-family: "Prosto One", sans-serif;
+   box-sizing: border-box;
+   
+}
+
+body {
+margin: 0;
+}
+
+img {
+   box-sizing: border-box;
+   width: 100%;
+   height: 100%;
+}
+
+ul, li {
+   text-decoration: none;
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.container {
+   max-width: 1240px;
+   margin: auto;
+}

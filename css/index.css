@@ -1,0 +1,176 @@
+nav {
+   padding: 10px;
+   display: flex;
+   background-color: var(--background-blue);
+}
+
+.top {
+   display: flex;
+   align-items: center;
+}
+
+.logo {
+   display: flex;
+   font-size: 25px;
+   text
+}
+
+.logo2 { color: var(--main-blue); }
+.logo3 { color: var(--dark-blue); }
+.menu { 
+   display: flex; 
+   padding: 0;
+   margin-left: auto;
+   
+}
+
+.menu li {
+   padding:0px 5px;
+}
+
+.menu li a {
+   color: var(--main-blue);
+}
+
+.marg { 
+   margin: auto;
+   white-space: nowrap;
+   overflow: hidden;
+}
+
+@keyframes slides {
+   from {
+      transform: translateX(0%);
+   }
+   to {
+      transform: translateX(-100%);
+   } 
+}
+
+.hero { 
+   padding: 5rem 0rem;
+   background-color: var(--dark-blue-accent);
+}
+
+.hero-text {
+   text-align: center;
+}
+
+.hero-text h1 {
+   font-size: 3rem;
+   color: var(--main-blue);
+}
+
+.hero-text h2 {
+   font-size: 2rem;
+   color: var(--main-darker-blue);
+}
+
+.hero-images {
+   padding: 10rem 0rem;
+   overflow: hidden;
+}
+
+.slide {
+   display: inline-flex;
+   animation: 10s slides infinite linear;
+}
+.slide .img { 
+   width: 20rem;
+   margin: auto 20px;
+   display: inline-block;
+}
+.wrapper {
+   background-color: var(--main-darker-blue);
+   padding: 5rem;
+   text-align: center;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.buttons { margin-left: auto;}
+.buttons button {
+   background-color: var(--main-blue);
+   padding: .5rem 1rem;
+   border: 1px solid var(--dark-blue);
+   border-radius: 10px;
+}
+
+#anime, #favorites {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   background-color: var(--main-darker-blue);
+   margin: auto;
+   justify-content: center;
+}
+
+
+
+.card {
+   max-width: 20rem;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   overflow: hidden;
+   padding: 10px;
+   height: 30rem;
+   margin: 10px;
+   transition: ease-in-out .2s;
+   border-radius: 20px;
+}
+
+.card div {
+   width: 10rem;
+   justify-content: center;
+}
+
+.card:hover {
+   transform: scale(1.2);
+   overflow: visible;
+   background-color: var(--dark-blue);
+   height: auto;
+}
+
+@media (max-width: 1400px) {
+   .container {
+      max-width: 1000px;
+      width: 100%
+   }
+
+
+   .top { width: 100% }
+   .logo{font-size: 1.5rem;}
+   .menu {
+      font-size: 1rem;
+      margin-left: auto;
+   }
+   
+   .hero-text{width: 100%;}
+   .hero-text h1 {font-size: 1.6rem;}
+   .hero-text h2 {font-size: 1.3rem;}
+   .wrapper {display: block;}
+   .card { 
+      height: fit-content;
+      max-width: 10rem;
+   }
+
+   .card h3 {font-size: 1rem;}
+   .card p {
+      font-size: .73rem;
+      font-weight: 100;
+   }
+
+   .card:hover{ transform: none;}
+}
+
+@media  (max-width: 768px) {
+   .hero-text h1{ font-size: 1.2rem }
+   .hero-text h2 {font-size: .8rem;}
+}
+
+@media only screen and (max-width: 600px) {
+   .logo {font-size: 1rem;}
+   .menu li a {font-size: .8rem;}
+}
