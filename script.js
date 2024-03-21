@@ -41,7 +41,6 @@ const data = async () =>
     .then((response) => response.json())
     .then((json) => {
       const data = json.data.Page.media;
-      console.log(data);
       data.map((anime) => {
         const wrapper = document.querySelector("#anime");
         const card = document.createElement("div");

@@ -1,7 +1,7 @@
 nav {
    padding: 10px;
    display: flex;
-   background-color: var(--background-blue);
+   background-color: var(--main-blue);
 }
 
 .top {
@@ -12,11 +12,11 @@ nav {
 .logo {
    display: flex;
    font-size: 25px;
-   text
 }
 
-.logo2 { color: var(--main-blue); }
-.logo3 { color: var(--dark-blue); }
+.logo2 { color: var(--main-darker-blue); }
+.logo3 { color: var(--gold-leaf); }
+.logo { color: white;}
 .menu { 
    display: flex; 
    padding: 0;
@@ -29,12 +29,11 @@ nav {
 }
 
 .menu li a {
-   color: var(--main-blue);
+   color: white;
 }
 
 .marg { 
    margin: auto;
-   white-space: nowrap;
    overflow: hidden;
 }
 
@@ -49,7 +48,7 @@ nav {
 
 .hero { 
    padding: 5rem 0rem;
-   background-color: var(--dark-blue-accent);
+   background-color: #D9D9D9;
 }
 
 .hero-text {
@@ -69,6 +68,7 @@ nav {
 .hero-images {
    padding: 10rem 0rem;
    overflow: hidden;
+   white-space: nowrap;
 }
 
 .slide {
@@ -79,13 +79,17 @@ nav {
    width: 20rem;
    margin: auto 20px;
    display: inline-block;
+   box-shadow: -10px 20px 40px 10px rgba(0, 0, 0, .6);
 }
 .wrapper {
-   background-color: var(--main-darker-blue);
    padding: 5rem;
    text-align: center;
    display: flex;
    flex-wrap: wrap;
+}
+
+.wrapper h2 {
+   color: var(--gold-leaf);
 }
 
 .buttons { margin-left: auto;}
@@ -100,7 +104,6 @@ nav {
    width: 100%;
    display: flex;
    flex-wrap: wrap;
-   background-color: var(--main-darker-blue);
    margin: auto;
    justify-content: center;
 }
@@ -122,16 +125,19 @@ nav {
 }
 
 .card div {
-   width: 10rem;
+   max-width: 10rem;
    justify-content: center;
 }
 
 .card:hover {
    transform: scale(1.2);
    overflow: visible;
-   background-color: var(--dark-blue);
+   background-color: var(--gold-leaf);
    height: auto;
+   color: white;
 }
+
+.about h3 {color: var(--gold-leaf)}
 
 @media (max-width: 1400px) {
    .container {
@@ -153,7 +159,7 @@ nav {
    .wrapper {display: block;}
    .card { 
       height: fit-content;
-      max-width: 10rem;
+      max-width: 15rem;
    }
 
    .card h3 {font-size: 1rem;}
@@ -170,7 +176,8 @@ nav {
    .hero-text h2 {font-size: .8rem;}
 }
 
-@media only screen and (max-width: 600px) {
-   .logo {font-size: 1rem;}
+@media only screen and (max-width: 500px) {
+   .logo {font-size: .9rem;}
    .menu li a {font-size: .8rem;}
+   .card {width: 20rem}
 }

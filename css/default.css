@@ -1,9 +1,8 @@
 :root {
-   --main-blue: #3E92CC;
-   --main-darker-blue: #2A628F;
-   --dark-blue: #13293D;
-   --dark-blue-accent: #16324F;
-   --background-blue: #18435A;
+   --main-blue: #328cc1;
+   --main-darker-blue: #0b3c5d;
+   --dark-blue: #1d2731;
+   --gold-leaf: #d9b310;
    font-family: "Prosto One", sans-serif;
    box-sizing: border-box;
    
@@ -11,6 +10,7 @@
 
 body {
 margin: 0;
+background-color: #d9d9d9;
 }
 
 img {
