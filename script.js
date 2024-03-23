@@ -88,7 +88,6 @@ const counter = (data) => {
     const counting = counts.hasOwnProperty(source)
       ? (counts[`${source}`] = counts[`${source}`] + 1)
       : (counts[`${source}`] = 1);
-    console.log(source);
   });
   return counts;
 };
@@ -143,7 +142,6 @@ const changeLocation = () => {
 
 const sortCards = (direction, container) => {
   const newArray = Array.from(container.childNodes);
-  console.log(Array.from(container.childNodes));
   const sort = (a, b) => {
     if (a.children[1].innerText < b.children[1].innerText)
       return direction === "desc" ? 1 : -1;
@@ -174,7 +172,6 @@ const buildProjectDom = async () =>
     .then((response) => response.json())
     .then((json) => {
       const data = json.data.Page.media;
-      console.log(data);
       counterBuilder(data);
       buildCards(data);
       changeLocation();
@@ -182,5 +179,5 @@ const buildProjectDom = async () =>
         buttonEventListener(buttonset)
       );
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.error(err));
 buildProjectDom();
