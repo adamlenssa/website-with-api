@@ -21,6 +21,51 @@ query GetFirstsThree{
 }
   `;
 
+const images = [
+  [
+    "https://i5.walmartimages.com/seo/Naruto-Shippuden-Group-Wall-Poster-22-375-x-34-Framed_cea502c6-8a2b-4f23-b7cf-3dbaddd3b5f0.60e9f542d46f764023e4f7415684d99e.jpeg",
+    "https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2022/06/10/5276d02e-5217-4f55-91a2-7d60186a6038_162e016e.jpg",
+    "https://i.pinimg.com/originals/1a/08/3b/1a083be414f042266850207d8badf284.jpg",
+    "https://miro.medium.com/v2/resize:fit:1400/1*10sQCBzHcWFfPS6Lxl3VhQ.jpeg",
+    "https://gritdaily.com/wp-content/uploads/2020/06/netmarble_seven-deadly-sins-grand-cross.jpg",
+    "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F08%2FNetflixs-%E2%80%98Baki-Hanma-New-Season-2-Trailer-0.jpg?fit=max&cbr=1&q=90&w=750&h=500",
+    "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10701949_b_v8_ah.jpg",
+    "https://image.api.playstation.com/vulcan/ap/rnd/202007/1308/StbziMS5VEhNntVpqjIRyOl1.png",
+    "https://demonslayer-hinokami.sega.com/img/purchase/digital-standard.jpg",
+    "https://m.media-amazon.com/images/M/MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
+  ],
+  [
+    "https://i5.walmartimages.com/seo/Naruto-Shippuden-Group-Wall-Poster-22-375-x-34-Framed_cea502c6-8a2b-4f23-b7cf-3dbaddd3b5f0.60e9f542d46f764023e4f7415684d99e.jpeg",
+    "https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2022/06/10/5276d02e-5217-4f55-91a2-7d60186a6038_162e016e.jpg",
+    "https://i.pinimg.com/originals/1a/08/3b/1a083be414f042266850207d8badf284.jpg",
+    "https://miro.medium.com/v2/resize:fit:1400/1*10sQCBzHcWFfPS6Lxl3VhQ.jpeg",
+    "https://gritdaily.com/wp-content/uploads/2020/06/netmarble_seven-deadly-sins-grand-cross.jpg",
+    "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F08%2FNetflixs-%E2%80%98Baki-Hanma-New-Season-2-Trailer-0.jpg?fit=max&cbr=1&q=90&w=750&h=500",
+    "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10701949_b_v8_ah.jpg",
+    "https://image.api.playstation.com/vulcan/ap/rnd/202007/1308/StbziMS5VEhNntVpqjIRyOl1.png",
+    "https://demonslayer-hinokami.sega.com/img/purchase/digital-standard.jpg",
+    "https://m.media-amazon.com/images/M/MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
+  ],
+];
+
+const buildHeroSlides = (images) => {
+  images.forEach((set) => {
+    const heroImage = document.querySelector(".hero-images");
+    const slide = document.createElement("div");
+    slide.classList.add("slide");
+    set.map((url) => {
+      const imgWrapper = document.createElement("div");
+      imgWrapper.classList.add("img");
+      const img = document.createElement("img");
+      img.src = url;
+      imgWrapper.appendChild(img);
+      slide.appendChild(imgWrapper);
+    });
+    heroImage.appendChild(slide);
+  });
+};
+
+buildHeroSlides(images);
 const url = "https://graphql.anilist.co";
 const options = {
   method: "POST",

@@ -76,11 +76,13 @@ nav {
   white-space: nowrap;
 }
 
-.slide {
+.slide,
+.slide1 {
   display: inline-flex;
   animation: 10s slides infinite linear;
 }
-.slide .img {
+.slide .img,
+.slide1 .img {
   width: 20rem;
   margin: auto 20px;
   display: inline-block;
